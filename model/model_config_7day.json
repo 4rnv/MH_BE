@@ -1,0 +1,33 @@
+{
+  "feature_columns": [
+    "archetype_encoded",
+    "day_of_week",
+    "month",
+    "week_of_year",
+    "is_weekend",
+    "is_festival",
+    "is_monsoon",
+    "is_month_start",
+    "is_month_end",
+    "income_lag_1",
+    "income_lag_3",
+    "income_lag_7",
+    "income_rolling_mean_7",
+    "income_rolling_std_7",
+    "income_rolling_max_7",
+    "income_rolling_min_7",
+    "income_rolling_mean_14",
+    "income_rolling_std_14",
+    "income_cv_7",
+    "zero_income_count_7"
+  ],
+  "archetype_classes": [
+    "cab_driver",
+    "food_delivery_rider",
+    "freelancer",
+    "part_time_laborer",
+    "shop_assistant"
+  ],
+  "model_type": "7-day average income prediction",
+  "target": "income_next_7days_avg"
+}
