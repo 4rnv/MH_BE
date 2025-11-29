@@ -1,7 +1,7 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from config import create_indexes
-from routes import users, questionnaires, virtual_accounts, transactions, scheduled_payments, insights, predictions
+from routes import users, questionnaires, virtual_accounts, transactions, scheduled_payments, insights, predictions, chat
 from services.scheduler import start_background_tasks
 
 # Create database indexes on startup
@@ -27,6 +27,7 @@ app.include_router(transactions.router)
 app.include_router(scheduled_payments.router)
 app.include_router(insights.router)
 app.include_router(predictions.router)
+app.include_router(chat.router)
 
 # Health check endpoint
 @app.get("/")
